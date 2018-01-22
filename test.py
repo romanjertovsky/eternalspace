@@ -1,26 +1,30 @@
+"""
+
 from universe import Universe
 
 
 U = Universe()
 
-a = U.get_planet(-32, 4864)
+for i in range(10):
+    a = U.get_planet(i*1000, i*11)
+    print(a)
 
-print(a)
-###
+"""
 
-'''
 G = 6.67408e-11     # Universal Gravitational Constant
 
-# Mars
-M = 6.39e23         # Kg
-r = 3390000         # meters
+# Earth
+M = 5972000000000000000000000        # Kg
+r = 6371000         # meters
 
 g = round((G * (M / (r**2))), 2)
-print(g)
+print('g: {0}'.format(g))
+print('M: {0} Yg'.format(M / 1e21))
 
-# Earth
-M = 5.972e24        # Kg
-r = 6371000         # meters
+print('========')
+# Mars
+M = 639000000000000000000000         # Kg
+r = 3390000         # meters
 
 g = round((G * (M / (r**2))), 2)
 print(g)
@@ -46,4 +50,3 @@ r = 58232000        # meters
 
 g = round((G * (M / (r**2))), 2)
 print(g)
-'''

@@ -101,19 +101,19 @@ class Universe:
         planet_coord = '{}:{}'.format(x, y)
 
         cur_hash = self.md5(planet_coord + self._seed)
-        print(cur_hash)
+        #print(cur_hash)
         mass = self.hash_to_int(cur_hash, 1e23, 9.972e24)  # Kg
 
         #cur_hash = self.md5(cur_hash)
-        print(cur_hash)
+        #print(cur_hash)
         radius = self.hash_to_int(cur_hash, 2000000, 8500000)  # Meters
 
         cur_hash = self.md5(cur_hash)
-        print(cur_hash)
+        #print(cur_hash)
         g = round((self._G * (mass / (radius ** 2))), 2)  # Acceleration of gravity, m/sec
 
         cur_hash = self.md5(cur_hash)
-        print(cur_hash)
+        #print(cur_hash)
         av_t = self.hash_to_int(cur_hash, -200, 350)  # Average temperature, Celsius
 
         planet = {
